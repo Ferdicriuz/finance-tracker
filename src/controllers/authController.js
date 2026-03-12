@@ -8,7 +8,7 @@ const generateToken = (id) => {
 };
 
 // SIGNUP
-exports.signup = async (req, res) => {
+exports.signup = async (req, res, next) => {
   const { name, email, accountType, password } = req.body;
 
   try {
@@ -39,7 +39,7 @@ exports.signup = async (req, res) => {
 };
 
 // LOGIN
-exports.login = async (req, res) => {
+exports.login = async (req, res, next) => {
   const { email, password } = req.body;
 
   try {
